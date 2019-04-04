@@ -1,0 +1,557 @@
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///Users/vbattina/Teja/cwm-1.2.1/myfamily.ttl
+        
+#  Notation3 generation by
+#       notation3.py,v 1.200 2007/12/11 21:18:08 syosi Exp
+
+#   Base was: file:///Users/vbattina/Teja/cwm-1.2.1/myfamily.ttl
+     @prefix : <#> .
+    @prefix foaf: <http://xmlns.com/foaf/spec/foaf#> .
+    @prefix gc: <http://www.daml.org/2001/01/gedcom/gedcom#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    
+    "Anjali"     a rdfs:Resource .
+    
+    "Jagadish"     a rdfs:Resource .
+    
+    "Lakshmi"     a rdfs:Resource .
+    
+    "Lavanya"     a rdfs:Resource .
+    
+    "Maanas"     a rdfs:Resource .
+    
+    "Madhuri"     a rdfs:Resource .
+    
+    "Murali"     a rdfs:Resource .
+    
+    "Srujan"     a rdfs:Resource .
+    
+    "Subbaiah"     a rdfs:Resource .
+    
+    "Teja"     a rdfs:Resource .
+    
+    321     a rdfs:Resource .
+    
+    60     a rdfs:Resource .
+    
+    65     a rdfs:Resource .
+    
+    654     a rdfs:Resource .
+    
+    70     a rdfs:Resource .
+    
+    75     a rdfs:Resource .
+    
+    80     a rdfs:Resource .
+    
+    85     a rdfs:Resource .
+    
+    90     a rdfs:Resource .
+    
+    987     a rdfs:Resource .
+    
+    rdf:type     a rdf:Property,
+                rdfs:Resource .
+    
+    :Anjali     a rdfs:Resource;
+         gc:Familymembers :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Srujan;
+         gc:aunt :Madhuri;
+         gc:brother :Srujan;
+         gc:childIn :fam2;
+         gc:father :Jagadish;
+         gc:firstcousin :Maanas,
+                :Teja;
+         gc:givenName "Anjali";
+         gc:grandfather :Subbaiah;
+         gc:grandmother :Lakshmi;
+         gc:grandparent :Lakshmi,
+                :Subbaiah;
+         gc:iqLevel 60;
+         gc:landlineNumber 654;
+         gc:mother :Lavanya;
+         gc:parent :Jagadish,
+                :Lavanya;
+         gc:sex gc:Female;
+         gc:sibling :Srujan;
+         gc:uncle :Murali;
+         owl:differentFrom :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Srujan,
+                :Subbaiah .
+    
+    :Jagadish     a rdfs:Resource;
+         gc:Familymembers :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Srujan;
+         gc:childIn :fam3;
+         gc:daughter :Anjali;
+         gc:father :Subbaiah;
+         gc:givenName "Jagadish";
+         gc:iqLevel 75;
+         gc:landlineNumber 654;
+         gc:mother :Lakshmi;
+         gc:nephew :Maanas,
+                :Teja;
+         gc:parent :Lakshmi,
+                :Subbaiah;
+         gc:sex gc:Male;
+         gc:sibling :Madhuri;
+         gc:sister :Madhuri;
+         gc:smarterThan :Anjali,
+                :Lavanya,
+                :Maanas,
+                :Srujan,
+                :Teja;
+         gc:son :Srujan;
+         gc:spouse :Lavanya;
+         gc:spouseIn :fam2;
+         gc:wife :Lavanya;
+         owl:differentFrom :Anjali,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Anjali,
+                :Lakshmi,
+                :Lavanya,
+                :Madhuri,
+                :Srujan,
+                :Subbaiah .
+    
+    :Lakshmi     a rdfs:Resource;
+         gc:Familymembers :Lakshmi,
+                :Subbaiah;
+         gc:daughter :Madhuri;
+         gc:givenName "Lakshmi";
+         gc:granddaughter :Anjali;
+         gc:grandson :Maanas,
+                :Srujan,
+                :Teja;
+         gc:husband :Subbaiah;
+         gc:iqLevel 85;
+         gc:landlineNumber 987;
+         gc:sex gc:Female;
+         gc:smarterThan :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Teja;
+         gc:son :Jagadish;
+         gc:spouse :Subbaiah;
+         gc:spouseIn :fam3;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Anjali,
+                :Jagadish,
+                :Maanas,
+                :Madhuri,
+                :Srujan,
+                :Subbaiah,
+                :Teja .
+    
+    :Lavanya     a rdfs:Resource;
+         gc:Familymembers :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Srujan;
+         gc:daughter :Anjali;
+         gc:givenName "Lavanya";
+         gc:husband :Jagadish;
+         gc:iqLevel 70;
+         gc:landlineNumber 654;
+         gc:sex gc:Female;
+         gc:smarterThan :Anjali,
+                :Maanas,
+                :Srujan,
+                :Teja;
+         gc:son :Srujan;
+         gc:spouse :Jagadish;
+         gc:spouseIn :fam2;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Anjali,
+                :Jagadish,
+                :Srujan .
+    
+    :Maanas     a rdfs:Resource;
+         gc:Familymembers :Maanas,
+                :Madhuri,
+                :Murali,
+                :Teja;
+         gc:aunt :Lavanya;
+         gc:brother :Teja;
+         gc:childIn :fam1;
+         gc:father :Murali;
+         gc:firstcousin :Anjali,
+                :Srujan;
+         gc:givenName "Maanas";
+         gc:grandfather :Subbaiah;
+         gc:grandmother :Lakshmi;
+         gc:grandparent :Lakshmi,
+                :Subbaiah;
+         gc:iqLevel 65;
+         gc:landlineNumber 321;
+         gc:mother :Madhuri;
+         gc:parent :Madhuri,
+                :Murali;
+         gc:sex gc:Male;
+         gc:sibling :Teja;
+         gc:smarterThan :Anjali,
+                :Srujan;
+         gc:uncle :Jagadish;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Lakshmi,
+                :Madhuri,
+                :Murali,
+                :Subbaiah,
+                :Teja .
+    
+    :Madhuri     a rdfs:Resource;
+         gc:Familymembers :Maanas,
+                :Madhuri,
+                :Murali,
+                :Teja;
+         gc:brother :Jagadish;
+         gc:childIn :fam3;
+         gc:father :Subbaiah;
+         gc:givenName "Madhuri";
+         gc:husband :Murali;
+         gc:iqLevel 75;
+         gc:landlineNumber 321;
+         gc:mother :Lakshmi;
+         gc:nephew :Srujan;
+         gc:niece :Anjali;
+         gc:parent :Lakshmi,
+                :Subbaiah;
+         gc:sex gc:Female;
+         gc:sibling :Jagadish;
+         gc:smarterThan :Anjali,
+                :Lavanya,
+                :Maanas,
+                :Srujan,
+                :Teja;
+         gc:son :Maanas,
+                :Teja;
+         gc:spouse :Murali;
+         gc:spouseIn :fam1;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Murali,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Jagadish,
+                :Lakshmi,
+                :Maanas,
+                :Murali,
+                :Subbaiah,
+                :Teja .
+    
+    :Murali     a rdfs:Resource;
+         gc:Familymembers :Maanas,
+                :Madhuri,
+                :Murali,
+                :Teja;
+         gc:givenName "Murali";
+         gc:iqLevel 80;
+         gc:landlineNumber 321;
+         gc:sex gc:Male;
+         gc:smarterThan :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Srujan,
+                :Teja;
+         gc:son :Maanas,
+                :Teja;
+         gc:spouse :Madhuri;
+         gc:spouseIn :fam1;
+         gc:wife :Madhuri;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Srujan,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Maanas,
+                :Madhuri,
+                :Teja .
+    
+    :Srujan     a rdfs:Resource;
+         gc:Familymembers :Anjali,
+                :Jagadish,
+                :Lavanya,
+                :Srujan;
+         gc:aunt :Madhuri;
+         gc:childIn :fam2;
+         gc:father :Jagadish;
+         gc:firstcousin :Maanas,
+                :Teja;
+         gc:givenName "Srujan";
+         gc:grandfather :Subbaiah;
+         gc:grandmother :Lakshmi;
+         gc:grandparent :Lakshmi,
+                :Subbaiah;
+         gc:iqLevel 60;
+         gc:landlineNumber 654;
+         gc:mother :Lavanya;
+         gc:parent :Jagadish,
+                :Lavanya;
+         gc:sex gc:Male;
+         gc:sibling :Anjali;
+         gc:sister :Anjali;
+         gc:uncle :Murali;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Subbaiah,
+                :Teja;
+         foaf:knows :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Subbaiah .
+    
+    :Subbaiah     a rdfs:Resource;
+         gc:Familymembers :Lakshmi,
+                :Subbaiah;
+         gc:daughter :Madhuri;
+         gc:givenName "Subbaiah";
+         gc:granddaughter :Anjali;
+         gc:grandson :Maanas,
+                :Srujan,
+                :Teja;
+         gc:iqLevel 90;
+         gc:landlineNumber 987;
+         gc:sex gc:Male;
+         gc:smarterThan :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Teja;
+         gc:son :Jagadish;
+         gc:spouse :Lakshmi;
+         gc:spouseIn :fam3;
+         gc:wife :Lakshmi;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Teja;
+         foaf:knows :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Maanas,
+                :Madhuri,
+                :Srujan,
+                :Teja .
+    
+    :Teja     a rdfs:Resource;
+         gc:Familymembers :Maanas,
+                :Madhuri,
+                :Murali,
+                :Teja;
+         gc:aunt :Lavanya;
+         gc:brother :Maanas;
+         gc:childIn :fam1;
+         gc:father :Murali;
+         gc:firstcousin :Anjali,
+                :Srujan;
+         gc:givenName "Teja";
+         gc:grandfather :Subbaiah;
+         gc:grandmother :Lakshmi;
+         gc:grandparent :Lakshmi,
+                :Subbaiah;
+         gc:iqLevel 65;
+         gc:landlineNumber 321;
+         gc:mother :Madhuri;
+         gc:parent :Madhuri,
+                :Murali;
+         gc:sex gc:Male;
+         gc:sibling :Maanas;
+         gc:smarterThan :Anjali,
+                :Srujan;
+         gc:uncle :Jagadish;
+         owl:differentFrom :Anjali,
+                :Jagadish,
+                :Lakshmi,
+                :Lavanya,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Srujan,
+                :Subbaiah;
+         foaf:knows :Lakshmi,
+                :Maanas,
+                :Madhuri,
+                :Murali,
+                :Subbaiah .
+    
+    :fam1     a gc:Family,
+                rdfs:Resource .
+    
+    :fam2     a gc:Family,
+                rdfs:Resource .
+    
+    :fam3     a gc:Family,
+                rdfs:Resource .
+    
+    gc:Family     a rdfs:Resource .
+    
+    gc:Female     a rdfs:Resource .
+    
+    gc:Male     a rdfs:Resource .
+    
+    gc:aunt     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:brother     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:childIn     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:daughter     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:father     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:firstcousin     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:givenName     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:granddaughter     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:grandfather     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:grandmother     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:grandparent     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:grandson     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:husband     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:iqLevel     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:landlineNumber     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:mother     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:nephew     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:niece     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:parent     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:sex     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:sibling     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:sister     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:son     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:spouse     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:spouseIn     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:uncle     a rdf:Property,
+                rdfs:Resource .
+    
+    gc:wife     a rdf:Property,
+                rdfs:Resource .
+    
+    rdf:Property     a rdfs:Resource .
+    
+    rdfs:Resource     a rdfs:Resource .
+    
+    owl:differentFrom     a rdf:Property,
+                rdfs:Resource .
+    
+#ENDS

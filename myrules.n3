@@ -1,0 +1,14 @@
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix gc: <http://www.daml.org/2001/01/gedcom/gedcom#>.
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix foaf:<http://xmlns.com/foaf/spec/foaf#>.
+
+{?P1 gc:iqLevel ?I1. ?P2 gc:iqLevel ?I2. ?I1 math:greaterThan ?I2} => {?P1 gc:smarterThan ?P2}.
+{?P1 gc:landlineNumber ?L1 . ?P2 gc:landlineNumber ?L2. ?L1 math:equalTo ?L2} => {?P1 gc:Familymembers ?P2}.
+
+{?P1 gc:parent ?P2} => {?P1 foaf:knows ?P2 . ?P2 foaf:knows ?P1}.
+{?P1 gc:sibling ?P2} => {?P1 foaf:knows ?P2}.
+{?P1 gc:grandparent ?P2} => {?P1 foaf:knows ?P2 . ?P2 foaf:knows ?P1}.
+{?P1 gc:spouse ?P2} => {?P1 foaf:knows ?P2}.

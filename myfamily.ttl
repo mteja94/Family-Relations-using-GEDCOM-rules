@@ -1,0 +1,90 @@
+# A simple example of family relations using the gedcom vocabulary,
+#  based on the Genealogical Data Communication genealogy standard,
+#  https://en.wikipedia.org/wiki/GEDCOM
+
+@prefix : <#> .
+@prefix gc: <http://www.daml.org/2001/01/gedcom/gedcom#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+# data in GEDCOM form
+
+:fam1 a gc:Family .
+:fam2 a gc:Family .
+:fam3 a gc:Family .
+
+:Teja gc:sex gc:Male;
+  gc:givenName "Teja";
+  gc:childIn :fam1;
+  gc:iqLevel 65;
+  gc:landlineNumber 321.
+
+:Maanas gc:sex gc:Male;
+  gc:givenName "Maanas";
+  gc:childIn :fam1;
+  gc:iqLevel 65;
+  gc:landlineNumber 321.
+
+:Murali gc:sex gc:Male;
+  gc:givenName "Murali";
+  gc:spouseIn :fam1;
+  gc:iqLevel 80;
+  gc:landlineNumber 321.
+
+:Madhuri gc:sex gc:Female;
+  gc:givenName "Madhuri";
+  gc:spouseIn :fam1;
+  gc:childIn :fam3;
+  gc:sibling :Jagadish;
+  gc:iqLevel 75;
+  gc:landlineNumber 321.
+
+:Jagadish gc:sex gc:Male;
+  gc:givenName "Jagadish";
+  gc:childIn :fam3;
+  gc:spouseIn :fam2;
+  gc:iqLevel 75;
+  gc:landlineNumber 654.
+
+:Lavanya gc:sex gc:Female;
+  gc:givenName "Lavanya";
+  gc:spouseIn :fam2;
+  gc:iqLevel 70;
+  gc:landlineNumber 654.
+
+:Srujan gc:sex gc:Male;
+  gc:givenName "Srujan";
+  gc:childIn :fam2;
+  gc:iqLevel 60;
+  gc:landlineNumber 654.
+
+:Anjali gc:sex gc:Female;
+  gc:givenName "Anjali";
+  gc:childIn :fam2;
+  gc:iqLevel 60;
+  gc:landlineNumber 654.
+
+:Subbaiah gc:sex gc:Male;
+  gc:givenName "Subbaiah";
+  gc:spouseIn :fam3;
+  gc:iqLevel 90;
+  gc:landlineNumber 987.
+
+:Lakshmi gc:sex gc:Female;
+  gc:givenName "Lakshmi";
+  gc:spouseIn :fam3;
+  gc:iqLevel 85;
+  gc:landlineNumber 987.
+
+# [ ] a owl:AllDifferent; owl:distinctMembers (:Teja :Maanas :Murali :Madhuri :Jagadish :Lavanya :Srujan :Anjali :Subbaiah :Lakshmi) .
+
+:Teja owl:differentFrom :Maanas, :Murali, :Madhuri, :Jagadish, :Lavanya, :Srujan, :Anjali, :Subbaiah, :Lakshmi.
+:Maanas owl:differentFrom :Teja, :Murali, :Madhuri, :Jagadish, :Lavanya, :Srujan, :Anjali, :Subbaiah, :Lakshmi.
+:Murali owl:differentFrom :Teja, :Maanas, :Madhuri, :Jagadish, :Lavanya, :Srujan, :Anjali, :Subbaiah, :Lakshmi.
+:Madhuri owl:differentFrom :Teja, :Maanas, :Murali, :Jagadish, :Lavanya, :Srujan, :Anjali, :Subbaiah, :Lakshmi.
+:Jagadish owl:differentFrom :Teja, :Maanas, :Murali, :Madhuri, :Lavanya, :Srujan, :Anjali, :Subbaiah, :Lakshmi.
+:Lavanya owl:differentFrom :Teja, :Maanas, :Murali, :Madhuri, :Jagadish, :Srujan, :Anjali, :Subbaiah, :Lakshmi.
+:Srujan owl:differentFrom :Teja, :Maanas, :Murali, :Madhuri, :Jagadish, :Lavanya, :Anjali, :Subbaiah, :Lakshmi.
+:Anjali owl:differentFrom :Teja, :Maanas, :Murali, :Madhuri, :Jagadish, :Lavanya, :Srujan, :Subbaiah, :Lakshmi.
+:Subbaiah owl:differentFrom :Teja, :Maanas, :Murali, :Madhuri, :Jagadish, :Lavanya, :Srujan, :Anjali, :Lakshmi.
+:Lakshmi owl:differentFrom :Teja, :Maanas, :Murali, :Madhuri, :Jagadish, :Lavanya, :Srujan, :Anjali, :Subbaiah.
